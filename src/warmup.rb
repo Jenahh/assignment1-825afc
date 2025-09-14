@@ -19,13 +19,17 @@ def nthmax(n, a)
 end
 
 def freq(s)
-    raise Exception, "Not Implemented"
+    return "" if s.empty?
+    count = Hash.new(0)
+    s.each_char {|ch| count[ch] +=1}
+    count.max_by {|_,v| v}[0]
 end
 
 def zipHash(arr1, arr2)
-    raise Exception, "Not Implemented"
+    return nil unless arr1.length == arr2.length
+    Hash[arr1.zip(arr2)]
 end
 
 def hashToArray(hash)
-    raise Exception, "Not Implemented"
+    hash.map {|k,v| [k,v]}
 end
