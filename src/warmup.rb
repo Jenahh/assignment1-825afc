@@ -14,7 +14,8 @@ def isPalindrome(n)
 end
 
 def nthmax(n, a)
-    raise Exception, "Not Implemented"
+    uniq_sorted = a.uniq.sort.reverse
+    uniq_sorted[n]
 end
 
 def freq(s)
