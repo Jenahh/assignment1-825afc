@@ -1,5 +1,11 @@
 def fib(n)
-    raise Exception, "Not Implemented"
+    return [] if n == 0
+    return [0] if n == 1
+    seq = [0,1]
+    (2...n).each do |i|
+        seq << seq[i-1] + seq[i-2]
+    end
+    seq
 end
 
 def isPalindrome(n)
