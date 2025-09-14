@@ -9,7 +9,8 @@ def fib(n)
 end
 
 def isPalindrome(n)
-    raise Exception, "Not Implemented"
+    s = n.to_s
+    s == s.reverse
 end
 
 def nthmax(n, a)
